@@ -9,7 +9,7 @@
 // - **SPECIAL**: packages that are either heavy or bulky can't be handled automatically.
 // - **REJECTED**: packages that are **both** heavy and bulky are rejected.
 
-enum StackName {
+export enum StackName {
   'STANDARD',
   'SPECIAL',
   'REJECTED',
@@ -37,7 +37,7 @@ export const sort = (
 ): StackName => {
   // keeping validated input its own check distinct from the bulky check
   // this will let us add more helpful input validation in the future beyond just 'rejected', since we reject valid input as well
-  const cmsAreValid = [widthCM, heightCM, lengthCM].some(validateCM);
+  const cmsAreValid = [widthCM, heightCM, lengthCM].every(validateCM);
   const massIsValid = validateKG(massKG);
   if (!cmsAreValid || !massIsValid) {
     return StackName.REJECTED;
