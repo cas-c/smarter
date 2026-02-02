@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import { useForm } from "react-hook-form";
-import React from "react";
 import { StackName, sort } from "./sort";
 
 type Inputs = {
@@ -15,8 +14,6 @@ function App() {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
     setValue,
   } = useForm<Inputs>({
     mode: "onChange",

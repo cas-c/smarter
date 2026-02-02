@@ -29,7 +29,7 @@ test("10x10x10 @ 0kg === REJECTED (invalid mass)", () => {
   expect(sort(10, 10, 10, 0)).toBe(StackName.REJECTED);
 });
 
-test("-2340x10x10 @ 0kg === REJECTED (negative input)", () => {
-    expect(sort(-2340, 10, 10, 0)).toBe(StackName.REJECTED);
+test("-2340x10x10 @ 10kg === REJECTED (negative input)", () => {
+    expect(sort(-2340, 10, 10, 10)).toBe(StackName.REJECTED);
 });
   
