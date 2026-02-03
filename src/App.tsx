@@ -86,7 +86,7 @@ function App() {
             </div>
           </div>
         </form>
-        <div className="pt-8">Stack: {StackName[stack] || "None"}</div>
+        <div className="pt-8">Stack: {stack ? StackName[stack] : "None"}</div>
       </section>
       <section id="spacer"></section>
       <section>

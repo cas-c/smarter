@@ -10,9 +10,9 @@
 // - **REJECTED**: packages that are **both** heavy and bulky are rejected.
 
 export enum StackName {
-  'STANDARD',
-  'SPECIAL',
-  'REJECTED',
+  'STANDARD' = "STANDARD",
+  'SPECIAL' = "SPECIAL",
+  'REJECTED' = "REJECTED",
   // todo: i might want to propose more specific responses such as
   // SPECIAL_HEAVY
   // SPECIAL_BULKY
